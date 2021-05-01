@@ -51,10 +51,7 @@
         "laravel": {
             "providers": [
                 "Abrahamarslan\\LaravelDiskMonitor\\LaravelDiskMonitorServiceProvider"
-            ],
-            "aliases": {
-                "LaravelDiskMonitor": "Abrahamarslan\\LaravelDiskMonitor\\LaravelDiskMonitorFacade"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",

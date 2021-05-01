@@ -2,6 +2,7 @@
 
 namespace Abrahamarslan\LaravelDiskMonitor;
 
+use Abrahamarslan\LaravelDiskMonitor\Commands\RecordDiskMetrics;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Abrahamarslan\LaravelDiskMonitor\Commands\LaravelDiskMonitorCommand;
@@ -20,6 +21,7 @@ class LaravelDiskMonitorServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_laravel-disk-monitor_table')
-            ->hasCommand(LaravelDiskMonitorCommand::class);
+            ->hasCommand([LaravelDiskMonitorCommand::class, RecordDiskMetrics::class]);
+
     }
 }
