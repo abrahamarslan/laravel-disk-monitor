@@ -3,7 +3,6 @@
 
 namespace Abrahamarslan\LaravelDiskMonitor\Commands;
 
-
 use Abrahamarslan\LaravelDiskMonitor\Models\DiskMonitorEntry;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
@@ -21,7 +20,7 @@ class RecordDiskMetricsCommand extends Command
         $fileCount = count(Storage::disk($discName)->allFiles());
         DiskMonitorEntry::create([
             'disk' => $discName,
-            'file_count' => $fileCount
+            'file_count' => $fileCount,
 
         ]);
         $this->comment('All metrics calculated.');
