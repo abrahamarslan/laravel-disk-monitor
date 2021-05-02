@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 
 class RecordDiskMetricsCommand extends Command
 {
-    public $signature = 'disk-monitor::record-metrics';
+    public $signature = 'record-metrics';
 
     public $description = 'Record metrics of a disk';
 
